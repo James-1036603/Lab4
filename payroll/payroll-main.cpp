@@ -16,6 +16,7 @@ using std::cout;
 #include "employee.h"
 #include "fixed.h"
 #include "hourly.h"
+#include "CommisionWorker.h"
 
 
 int main()
@@ -44,7 +45,10 @@ int main()
 
 	employee2_ptr->print();										// static binding
 	cout << " earned R " << employee2_ptr->earnings() << endl;	// dynamic binding
-
+	shared_ptr<Employee> employee3_ptr = make_shared<CommisionWorker>("James", "Phillips", 50000, 250, 260);
+	employee3_ptr->print();
+	cout<<endl;
+	cout<<employee3_ptr->earnings()<<endl;
 	cout << endl;
 	return 0;
 }
