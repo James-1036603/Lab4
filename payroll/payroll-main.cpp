@@ -13,11 +13,22 @@ using std::ios;
 using std::endl;
 using std::cout;
 
+#include <vector>
+using std::vector;
+
 #include "employee.h"
 #include "fixed.h"
 #include "hourly.h"
 #include "CommisionWorker.h"
 
+double totalWorkForceEarnings(const shared_ptr<vector <Employee>>& workforce)
+{
+	double totalEarnings = 0.0;
+	for(auto i = 0u; i != workforce->size(); i++) totalEarnings += workforce->at(i).earnings();
+	return totalEarnings;
+}
+
+	
 
 int main()
 {
@@ -50,6 +61,10 @@ int main()
 	cout<<endl;
 	cout<<employee3_ptr->earnings()<<endl;
 	cout << endl;
+	
+	
+	auto employees_ptr = make_shared<vector<Employee>>;
+	
 	return 0;
 }
 //As the employee print function was non-virtual, the derived classes could not use it
