@@ -3,8 +3,7 @@
 #include "hourly.h"
 
 // Constructor
-HourlyWorker::HourlyWorker (const string& first_name, const string& surname,
-							double wage, double weekly_hours)
+HourlyWorker::HourlyWorker (const string& first_name, const string& surname, double wage, double weekly_hours)
 							: Employee(first_name, surname),  // call base-class constructor
 							  _wage(wage),
 							  _weekly_hours(weekly_hours)

@@ -48,4 +48,4 @@ int main()
 	cout << endl;
 	return 0;
 }
-
+//As the employee print function was non-virtual, the derived classes could not use it
